@@ -2,8 +2,10 @@ services:
   - type: web
     name: pta-auth-backend
     env: node
+    plan: free
     buildCommand: cd backend && npm install
     startCommand: cd backend && npm start
+    workingDirectory: backend
     envVars:
       - key: PORT
         value: 10000
